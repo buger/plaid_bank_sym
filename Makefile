@@ -1,8 +1,8 @@
-SOURCE = bank.go
+SOURCE = main.go accounts.go auth.go bank.go utils.go filedb.go transaction.go
 CONTAINER = plaid_bank_sym
 SOURCE_PATH = /go/src/github.com/buger/$(CONTAINER)
 TEST = .
-DRUN = docker run -v `pwd`:$(SOURCE_PATH) -i -t $(CONTAINER)
+DRUN = docker run -v `pwd`:$(SOURCE_PATH) -p 8080:80 -i -t $(CONTAINER)
 
 build:
 	docker build -t $(CONTAINER) .

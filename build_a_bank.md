@@ -2,7 +2,7 @@
 
 In order to retrieve financial data, Plaid works with thousands of financial
 institutions and banks. While modern banks have evolved to serve a plethora of
-functions, at their core, bankпагрs must provide certain basic features. Today,
+functions, at their core, banks must provide certain basic features. Today,
 your task is to build the basic HTTP API for one of those banks!
 
 Imagine you are designing a backend API for bank employees. It could ultimately
