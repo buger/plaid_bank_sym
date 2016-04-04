@@ -1,6 +1,6 @@
 It defintly took more time then expected, about 7 hours. Mainly because i focused too much on security part, implementing token based auth, but when we talking about financial applications it always pays off.
 
-I used own DB storage for simplicity, it stores data in plain files which simplify debugging a lot and what is most important provide global locks for writes and reads and transactions which is essential for money transfering. In production it should be replaced by DB supporting transactions or by blockchain like Etherium (which i wanted to try first, but i did not had experience with it, so decided to make tradidional way).
+I used own DB storage for simplicity (i took it from another pet project), it stores data in plain files which simplify debugging a lot and what is most important provide global locks for writes and reads and transactions which is essential for money transfering. In production it should be replaced by DB supporting transactions or by blockchain like Etherium (which i wanted to try first, but i did not had experience with it, so decided to make tradidional way).
 
 ## Completeness: did you complete the features?
 Everything from spec is done.
