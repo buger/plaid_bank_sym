@@ -98,6 +98,12 @@ curl -H "X-Auth-Token: xlR2nLipldslXseLM4gE7XEY22FVqg8Uyer86ijmnpg8LPvPSv" -H "X
 > {"error":"From account does not have enough money"}
 ```
 
+### View transactions
+```
+curl -H "X-Auth-Token: xlR2nLipldslXseLM4gE7XEY22FVqg8Uyer86ijmnpg8LPvPSv" -H "X-Auth-User: fJt1UIA1oc" http://45.33.2.140:8080/account/transactions?id=ZbVpvuAFQtzS93rVttz0Gy2Muxzhfh6vEb
+> [{"Id":"ZbVpvuAFQtzS93rVttz0Gy2Muxzhfh6vEb", ...},...]
+```
+
 ## Running locally
 Repo contains set of docker scripts. If you have docker intalled, first run `make build` to prepare image (only first time). And after you can use `make test` and `make run` commands.
 
