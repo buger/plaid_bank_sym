@@ -5,7 +5,7 @@ I used own DB storage for simplicity, it stores data in plain files which simpli
 ## Completeness: did you complete the features?
 Everything from spec is done.
 ## Correctness: does the functionality act in sensible, thought-out ways?
-I try to handle all possible errors, and in human readable way report all the issues
+I try to handle all possible errors, and in human readable way report all the issues. It should suggest approative HTTP codes.
 ## Maintainability: is it written in a clean, maintainable way?
 Definitly codebase is too large for such short amount of time to be nice.., but it's not so bad, especially considering number of tests.
 ## Testing: is the system adequately tested?
