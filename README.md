@@ -2,6 +2,8 @@ It defintly took more time then expected, about 7 hours. Mainly because i focuse
 
 I used own DB storage for simplicity (i took it from another pet project), it stores data in plain files which simplify debugging a lot and what is most important provide global locks for writes and reads and transactions which is essential for money transfering. In production it should be replaced by DB supporting transactions or by blockchain like Etherium (which i wanted to try first, but i did not had experience with it, so decided to make tradidional way).
 
+App use token based auth, user enter login and password, and receive temporary token, which expire after 30 minutes, or if new session is started (for example another devide, user will be logged off from first session). Also there is built in mechanism for deactivating session using flag (for example if account was stollen), but its not exposed to API.
+
 ## Completeness: did you complete the features?
 Everything from spec is done.
 ## Correctness: does the functionality act in sensible, thought-out ways?
@@ -22,12 +24,11 @@ You can't create new bank, so this list populated manually.
 
 Crypt side should be replaced to use bcrypt algorithm, i just wanted to avoid dependecies
 
+Every login gets audited, so you can review it later, however there is no http API for that yet.
 
-Token based auth, user enter login and password, and receive temporary token. User sessions expiring after 30 minutes, also if new session is started (for example another devide, user will be logged off from first session). Every login gets audited, so you can review it later, however there is no http API for that yet.
+Account numbers for the same bank should have same pattern, so we can detect bankID by knowing only account number.
 
-Account numbers for the same bank should have same pattern.
-
-I initially I planned implement multi-bank transfers.
+I initially I planned implement multi-bank transfers, but it require more time. But basically i wanted to use smth like etcd for coordination, between banks.
 
 ## How to use
 
