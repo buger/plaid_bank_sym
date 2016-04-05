@@ -2,7 +2,7 @@ It defintly took more time then expected, about 7 hours. Mainly because i focuse
 
 I used own DB storage for simplicity (i took it from another pet project), it stores data in plain files which simplify debugging a lot and what is most important provide global locks for writes and reads and transactions which is essential for money transfering. In production it should be replaced by DB supporting transactions or by blockchain like Etherium (which i wanted to try first, but i did not had experience with it, so decided to make tradidional way).
 
-App use token based auth, user enter login and password, and receive temporary token, which expire after 30 minutes, or if new session is started (for example another devide, user will be logged off from first session). Also there is built in mechanism for deactivating session using flag (for example if account was stollen), but its not exposed to API.
+App use token based auth, user enter login and password, and receive temporary token, which expire after 30 minutes, or if new session is started (for example another device, user will be logged off from first session). Also there is built in mechanism for deactivating session using flag (for example if account was stolen), but its not exposed to API.
 
 ## Completeness: did you complete the features?
 Everything from spec is done.
